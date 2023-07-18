@@ -84,3 +84,27 @@ var nomes2 = new Array("Lucas","Maria","Paulo","Sandra")
 var cortado2 = nomes2.splice(2,1,"PAULINO")
 console.log(nomes2);
 console.log(cortado2);
+
+// manipulando com slice()
+var pais = ["Brasil","Argentina","Uruguai","Paraguai","Bolivia","Chile"]
+var osTresPrimeiros = pais.slice(0,3)
+console.log(osTresPrimeiros);
+console.log("O array pais segue intacto: "+pais)
+
+//Concatenar com concat()
+
+var novosPaises = ["Canadá","Mexico","Holanda"]
+var concatPaises = pais.concat(novosPaises);
+console.log(concatPaises)
+
+// divida os meses em trimestre
+var meses = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"]
+var qtdMeses = meses.length
+var primeiroTrimestre = meses.slice(0,3)
+var segundoTrimestre = meses.slice(3,6)
+var terceiroTrimestre = meses.slice(6,9)
+var quartoTrimestre = meses.slice(9,12)
+console.log("Meses do primeiro trimestre: "+primeiroTrimestre)
+console.log("Meses do segundo trimestre: "+segundoTrimestre)
+console.log("Meses do terceiro trimestre: "+terceiroTrimestre)
+console.log("Meses do quarto trimestre: "+quartoTrimestre)
