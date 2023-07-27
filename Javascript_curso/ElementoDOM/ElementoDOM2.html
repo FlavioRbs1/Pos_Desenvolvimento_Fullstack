@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>NodeJS</li>
+    </ul>
+    <button onclick="clicou()">clique</button>
+    <div id="conteudo" class="mensagem">
+
+    </div>
+    <span id="novospan" class="novo"> Aqui tem um texto</span>
+    <img src="./download.png" alt="">
+
+</body>
+<Script>
+
+    elemento0 = document.getElementsByTagName('li')[0]
+    elemento0.style.color = 'blue'
+    
+    elemento1 = document.getElementsByTagName('li')[1]
+    elemento1.style.background = 'blue'
+
+    elementoDiv = document.getElementById("conteudo")
+    elementoDiv.innerHTML = "<a href='www.youtube.com'> Coloquei um link</a>"
+    
+    function clicou(){
+        elemento2 = document.getElementsByTagName("li")[2]
+        window.alert("O terceiro nome será alterado")
+        elemento2.innerText = 'SpringBoot'
+    }
+
+    elementoSpan = document.querySelector("span.novo")
+    elementoSpan.style.background = "green"
+
+</Script>
+</html>

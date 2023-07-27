@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="botao()"> clique</button>
+</body>
+<Script>
+    function botao(){
+        let num = Number.parseInt(window.prompt("Digite um numero:"))
+        if (num < 30) {
+            window.alert("Ok, numero menor que 30")
+            
+        }else{
+            let valor = window.confirm("O numero é 30? se sim confirme, caso contrário, cancele")
+            if(valor){
+                window.alert("O numero é 30")
+            }else{
+                window.alert("O numero é maior que 30")
+            }
+        }
+        
+    }
+</Script>
+</html>

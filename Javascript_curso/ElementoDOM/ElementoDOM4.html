@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onmouseover="mouseemcima()" onmouseout="mousefora()">Texto</h1>
+    <button style="background-color: black; color: beige;" onclick="clicou()" onmouseover="emcima()" onmouseout="deixou()">Botão</button>
+    <button class="btndia" style="background-color: yellow; color: black;" onclick="diaclicou()" onmouseover="diaemcima()" onmouseout="diadeixou()">Dia</button>
+    <button class="btnnoite" style="background-color: black; color: beige;" onclick="noiteclicou()" onmouseover="noiteemcima()" onmouseout="noitedeixou()">Noite</button>
+</body>
+</html>
+<script>
+    
+    function mouseemcima(){
+        document.querySelector("h1").innerText = "O mouse está em cima"
+        document.querySelector("h1").style.background = "blue"
+    }
+    
+    function mousefora(){
+        document.querySelector("h1").innerText = "O mouse saiu"
+        document.querySelector("h1").style.background = "white"
+    }
+
+    function clicou(){
+        document.querySelector("button").style.background = "white"
+    }
+    function emcima(){
+        document.querySelector("button").style.background = "gray"
+        
+    }
+    function deixou(){
+        document.querySelector("button").style.background = "black"
+
+    }
+
+    function diaclicou(){
+        var mudaBody = document.querySelector("body")
+        mudaBody.style.background = "yellow"
+    }
+    function noiteclicou(){
+        var mudaBody = document.querySelector("body")
+        mudaBody.style.background = "black"
+    }
+    function noiteemcima(){
+        document.querySelector("button.btnnoite").style.background = "gray"
+    }
+    function diaemcima(){
+        document.querySelector("button.btndia").style.background = "gray"
+    }
+    function diadeixou(){
+        document.querySelector("button.btndia").style.background = "yellow"
+    }
+    function noitedeixou(){
+        document.querySelector("button.btnnoite").style.background = "black"
+    }
+
+</script>
