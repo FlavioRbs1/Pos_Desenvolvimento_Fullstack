@@ -1,0 +1,23 @@
+<h2>Lista simples de usuarios</h2>
+
+<div class="container">
+    <h1>manipulando-json</h1>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>email</th>
+            <th>Phone</th>
+        </thead>
+        <tbody>
+            <tr *ngFor='let user of users'>
+                <td>{{user.id}}</td>        
+                <td>{{user.firstName}}</td>        
+                <td>{{user.email}}</td>        
+                <td>{{user.phone}}</td>        
+                <td><button mat-button (click)='(user)'>Ir para o detalhe</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,22 @@
+{
+  "users":[  
+  {
+     "id":1,
+     "firstName":"Andre",
+     "email":"andre@caio",
+     "phone":"9999999"
+    },
+   {
+     "id":2,
+     "firstName":"saulo",
+     "email":"saulo@paulo",
+     "phone":"8888888"
+    },
+   {
+     "id":3,
+     "firstName":"Lucia",
+     "email":"lucia@carla",
+     "phone":"3333333"
+    }
+]
+}
