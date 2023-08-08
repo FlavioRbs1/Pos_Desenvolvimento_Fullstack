@@ -25,3 +25,7 @@
 .col:last-child {
   margin-right: 0;
 }
+.formCadastro{
+  margin: 3%;
+  max-width: 900px;
+}

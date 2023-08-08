@@ -1,25 +1,33 @@
 import { Component, inject } from '@angular/core';
-
 import { FormBuilder, Validators } from '@angular/forms';
 import { User } from '../models/user';
 
-
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  selector: 'app-editar',
+  templateUrl: './editar.component.html',
+  styleUrls: ['./editar.component.css']
 })
-export class CadastroComponent {
+export class EditarComponent {
   user:User = new User();
   private fb = inject(FormBuilder);
-  addressForm = this.fb.group({
-    firstName: [null, Validators.compose([
-      Validators.required, Validators.minLength(3), Validators.maxLength(70)])
-    ],
-    email: [null, Validators.required],
-    phone: [null, Validators.required],
-    password: [null, Validators.required]
-  });
+  addressForm: any;
+
+  constructor(){
+    if (localStorage.getItem('user') ) {
+      this.user =JSON.parse(localStorage.getItem('user') || '{}');
+  }
+    this.addressForm = this.fb.group({
+      firstName: [this.user.firstName, Validators.compose([
+        Validators.required, Validators.minLength(3), Validators.maxLength(70)])
+      ],
+      email: [this.user.email, Validators.required],
+      phone: [this.user.phone, Validators.required],
+      password: [null, Validators.required]
+    });
+  
+}
+
+  
 
   onSubmit(): void {
     this.user.id = '1';

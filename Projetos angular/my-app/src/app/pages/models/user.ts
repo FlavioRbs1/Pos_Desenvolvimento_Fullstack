@@ -3,4 +3,5 @@ export class User{
     public firstName:string = '';
     public email:string = '';
     public phone:string = '';
+    public password:string = '';
 }

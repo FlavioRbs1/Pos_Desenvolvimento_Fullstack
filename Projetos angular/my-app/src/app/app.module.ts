@@ -29,6 +29,8 @@ import { Page1Component } from './pages/sub-route/page1/page1.component';
 import { PrivadoComponent } from './pages/privado/privado.component';
 import { DetalheComponent } from './detalhe/detalhe/detalhe.component';
 import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
+import { EditarComponent } from './pages/editar/editar.component';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.compo
     Page1Component,
     PrivadoComponent,
     DetalheComponent,
-    ListaSimplesComponent
+    ListaSimplesComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
@@ -62,9 +65,11 @@ import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.compo
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
-  providers: [],
+  providers: [provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

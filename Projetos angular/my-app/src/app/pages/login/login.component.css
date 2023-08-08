@@ -25,3 +25,8 @@
 .col:last-child {
   margin-right: 0;
 }
+.formLogin{
+  margin: 150px;
+  box-shadow: 10px 5px 5px rgb(156, 155, 155);
+  max-width: 700px ;
+}
