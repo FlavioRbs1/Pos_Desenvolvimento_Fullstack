@@ -25,9 +25,25 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <textarea matInput placeholder="Telefone" mask="(00)00000-0000" formControlName="phone"></textarea>
+            <input matInput placeholder="Telefone" mask="(00)00000-0000" formControlName="phone">
             <mat-error *ngIf="addressForm.controls['phone'].hasError('required')">
               Telefone <strong>obrigatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="cpf" mask="000.000.000-00" formControlName="cpf">
+            <mat-error *ngIf="addressForm.controls['cpf'].hasError('required')">
+              Cpf <strong>obrigatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="cnpj" mask="00.000.000/0000-00" formControlName="cnpj">
+            <mat-error *ngIf="addressForm.controls['cnpj'].hasError('required')">
+              Cnpj <strong>obrigatorio</strong>
             </mat-error>
           </mat-form-field>
         </div>

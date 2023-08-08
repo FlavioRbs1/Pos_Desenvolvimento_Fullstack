@@ -18,7 +18,9 @@ export class CadastroComponent {
     ],
     email: [null, Validators.required],
     phone: [null, Validators.required],
-    password: [null, Validators.required]
+    password: [null, Validators.required],
+    cpf: [null, Validators.required],
+    cnpj: [null, Validators.required]
   });
 
   onSubmit(): void {
