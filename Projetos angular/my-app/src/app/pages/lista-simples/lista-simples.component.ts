@@ -18,7 +18,7 @@ export class ListaSimplesComponent implements OnInit{
   }
   
   goToDetail(user:User){
-    this.router.navigate(['/detalhe', user.id, user.phone])
+    this.router.navigate(['detalhe', user.id, user.phone])
   }
   getUsers():void{
     this.service.getUsers().subscribe(

@@ -13,12 +13,13 @@ const httpOptions = {
 })
 export class UserService {
 
-  BASE_URL:string='http://localhost:3000';
+  BASE_URL:string='http://localhost:3000/';
 
   constructor(private http:HttpClient) { }
 
   getUsers():Observable<User[]>{
-    return this.http.get<User[]>(this.BASE_URL + 'users',httpOptions)
+    var url: string = this.BASE_URL + 'users';
+    return this.http.get<User[]>(url)
   } 
   
   addUsers(user:any): Observable<User>{
