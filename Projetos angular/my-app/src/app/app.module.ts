@@ -31,6 +31,7 @@ import { DetalheComponent } from './detalhe/detalhe/detalhe.component';
 import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { UserService } from './service/services.service';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     NgxMaskDirective,
     NgxMaskPipe
   ],
-  providers: [provideNgxMask()],
+  providers: [UserService,provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

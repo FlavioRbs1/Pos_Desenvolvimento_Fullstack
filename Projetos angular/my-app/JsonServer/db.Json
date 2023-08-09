@@ -1,18 +1,29 @@
 {
-  "users":[  
-  {
-     "id":1,
-     "firstName":"Andre",
-     "email":"andre@caio",
-     "phone":"9999999",
-     "password":"123456"
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Andre",
+      "email": "andre@caio",
+      "phone": "9999999",
+      "cpf": "58553751023",
+      "password": "123456"
     },
-   {
-     "id":2,
-     "firstName":"saulo",
-     "email":"saulo@paulo",
-     "phone":"8888888",
-     "password":"123456"
+    {
+      "id": 2,
+      "firstName": "saulo",
+      "email": "saulo@paulo",
+      "phone": "8888888",
+      "cpf": "58553751013",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "name": "Carlos",
+      "email": "Carlos@gmail",
+      "phone": "11111111111",
+      "cpf": "09795038095",
+      "cnpj": "",
+      "password": "123456789"
     }
-]
+  ]
 }

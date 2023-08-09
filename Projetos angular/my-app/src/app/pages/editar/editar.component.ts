@@ -17,7 +17,7 @@ export class EditarComponent {
       this.user =JSON.parse(localStorage.getItem('user') || '{}');
   }
     this.addressForm = this.fb.group({
-      firstName: [this.user.firstName, Validators.compose([
+      name: [this.user.name, Validators.compose([
         Validators.required, Validators.minLength(3), Validators.maxLength(70)])
       ],
       email: [this.user.email, Validators.required],
@@ -31,8 +31,8 @@ export class EditarComponent {
 
   onSubmit(): void {
     this.user.id = '1';
-    if (this.addressForm.controls['firstName'].value)
-    this.user.firstName = this.addressForm.controls['firstName'].value;
+    if (this.addressForm.controls['name'].value)
+    this.user.name = this.addressForm.controls['name'].value;
     if (this.addressForm.controls['email'].value)
     this.user.email = this.addressForm.controls['email'].value;
     if (this.addressForm.controls['phone'].value)

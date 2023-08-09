@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { User } from '../models/user';
 import { GenericValidator } from 'src/app/comum/validador';
+import { UserService } from 'src/app/service/services.service';
 
 
 @Component({
@@ -11,10 +12,12 @@ import { GenericValidator } from 'src/app/comum/validador';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent {
-  user:User = new User();
+
+  constructor(private service: UserService) { }
+  user: User = new User();
   private fb = inject(FormBuilder);
   addressForm = this.fb.group({
-    firstName: [null, Validators.compose([
+    name: [null, Validators.compose([
       Validators.required, Validators.minLength(3), Validators.maxLength(70)])
     ],
     email: [null, Validators.required],
@@ -23,21 +26,35 @@ export class CadastroComponent {
     cpf: [null, Validators.compose([
       Validators.required, GenericValidator.isvalidCpf()])
 
-    ], 
+    ],
     cnpj: [null, Validators.required]
   });
 
   onSubmit(): void {
-    this.user.id = '1';
-    if (this.addressForm.controls['firstName'].value)
-    this.user.firstName = this.addressForm.controls['firstName'].value;
+    this.user.id = '';
+    if (this.addressForm.controls['name'].value)
+      this.user.name = this.addressForm.controls['name'].value;
     if (this.addressForm.controls['email'].value)
-    this.user.email = this.addressForm.controls['email'].value;
+      this.user.email = this.addressForm.controls['email'].value;
     if (this.addressForm.controls['phone'].value)
-    this.user.phone = this.addressForm.controls['phone'].value;
+      this.user.phone = this.addressForm.controls['phone'].value;
+    if (this.addressForm.controls['cpf'].value)
+      this.user.cpf = this.addressForm.controls['cpf'].value;
     if (this.addressForm.controls['password'].value)
-    this.user.password = this.addressForm.controls['password'].value;
-    alert('Usuário cadastrado com sucesso!');
-    localStorage.setItem('user',JSON.stringify(this.user));
+      this.user.password = this.addressForm.controls['password'].value;
+    //    alert('Usuário cadastrado com sucesso!');
+    //    localStorage.setItem('user',JSON.stringify(this.user));
+
+    console.log(this.user);
+    this.service.addUsers(this.user).subscribe({
+      next: (response) => {
+        console.log(response)
+        alert('Dado registrado com sucesso')
+      },
+      error: (erro: any) => {
+        console.log(erro)
+        alert('Ocorreu um erro')
+      }
+    })
   }
 }
