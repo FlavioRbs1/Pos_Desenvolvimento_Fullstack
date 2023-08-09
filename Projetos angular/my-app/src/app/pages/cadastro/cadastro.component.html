@@ -37,6 +37,9 @@
             <mat-error *ngIf="addressForm.controls['cpf'].hasError('required')">
               Cpf <strong>obrigatorio</strong>
             </mat-error>
+            <mat-error *ngIf="addressForm.controls['cpf'].getError('cpfNotValid')">
+              Cpf não é <strong>valido</strong>
+            </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
