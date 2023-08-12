@@ -13,16 +13,20 @@ import { autorizadoGuard } from './guards/autorizado.guard';
 import { DetalheComponent } from './detalhe/detalhe/detalhe.component';
 import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
 import { EditarComponent } from './pages/editar/editar.component';
+import { ModalComponent } from './pages/modal/modal.component';
+import { LestarComponent } from './pages/lestar/lestar.component';
 
 const routes: Routes = [
 {path:'', redirectTo:'/home',pathMatch:'full'},
 {path:'home',component:HomeComponent},
 {path:'listar',component:ListarComponent},
+{path:'lestar',component:LestarComponent},
 {path:'listar-simples',component:ListaSimplesComponent},
 {path:'cadastro',component:CadastroComponent},
 {path:'editar',component:EditarComponent},
 {path:'json',component:ManipulandoJsonComponent},
 {path:'login',component:LoginComponent},
+{path:'modal',component:ModalComponent},
 {path:'detalhe/:id/:phone',component:DetalheComponent},
 {path:'subroute',component:SubRouteComponent, 
   children:[

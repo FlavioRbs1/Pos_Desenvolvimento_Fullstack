@@ -5,5 +5,6 @@ export class User{
     public phone:string = '';
     public cpf:string = '';
     public cnpj:string = '';
+    public dataNascimento:string = '';
     public password:string = '';
 }

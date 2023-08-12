@@ -24,6 +24,124 @@
       "cpf": "09795038095",
       "cnpj": "",
       "password": "123456789"
+    },
+    {
+      "id": 4,
+      "name": "",
+      "email": "",
+      "phone": "",
+      "cpf": "",
+      "cnpj": "",
+      "password": ""
+    },
+    {
+      "id": 5,
+      "name": "DatePicker",
+      "email": "DatePicker@gmail",
+      "phone": "11111111111",
+      "cpf": "83002155063",
+      "cnpj": "",
+      "password": "1234567890"
+    },
+    {
+      "id": 6,
+      "name": "dataNascimento",
+      "email": "dataNascimento@dataNascimento",
+      "phone": "11111111111",
+      "cpf": "83002155063",
+      "cnpj": "",
+      "dataNascimento": "2023-08-01T03:00:00.000Z",
+      "password": "1234567890"
+    },
+    {
+      "id": 7,
+      "name": "Teste",
+      "email": "Teste@gmail",
+      "phone": "6578657576",
+      "cpf": "38760676000",
+      "cnpj": "",
+      "dataNascimento": "2023-08-18T03:00:00.000Z",
+      "password": "1343245324"
+    },
+    {
+      "id": 8,
+      "name": "Teste",
+      "email": "Teste@gmail",
+      "phone": "6578657576",
+      "cpf": "38760676000",
+      "cnpj": "",
+      "dataNascimento": "2023-08-18T03:00:00.000Z",
+      "password": "1343245324"
+    },
+    {
+      "id": 9,
+      "name": "Teste",
+      "email": "Teste@gmail",
+      "phone": "6578657576",
+      "cpf": "38760676000",
+      "cnpj": "",
+      "dataNascimento": "2023-08-18T03:00:00.000Z",
+      "password": "1343245324"
+    },
+    {
+      "id": 10,
+      "name": "Teste",
+      "email": "Teste@gmail",
+      "phone": "6578657576",
+      "cpf": "38760676000",
+      "cnpj": "",
+      "dataNascimento": "2023-08-18T03:00:00.000Z",
+      "password": "1343245324"
+    },
+    {
+      "id": 11,
+      "name": "Teste",
+      "email": "Teste@gmail",
+      "phone": "6578657576",
+      "cpf": "38760676000",
+      "cnpj": "",
+      "dataNascimento": "2023-08-18T03:00:00.000Z",
+      "password": "1343245324"
+    },
+    {
+      "id": 12,
+      "name": "Teste",
+      "email": "Teste@gmail",
+      "phone": "6578657576",
+      "cpf": "38760676000",
+      "cnpj": "",
+      "dataNascimento": "2023-08-18T03:00:00.000Z",
+      "password": "1343245324"
+    },
+    {
+      "id": 13,
+      "name": "Teste",
+      "email": "Teste@gmail",
+      "phone": "6578657576",
+      "cpf": "38760676000",
+      "cnpj": "",
+      "dataNascimento": "2023-08-18T03:00:00.000Z",
+      "password": "1343245324"
+    },
+    {
+      "id": 14,
+      "name": "Teste",
+      "email": "Teste@gmail",
+      "phone": "6578657576",
+      "cpf": "38760676000",
+      "cnpj": "",
+      "dataNascimento": "2023-08-18T03:00:00.000Z",
+      "password": "1343245324"
+    },
+    {
+      "id": 15,
+      "name": "Teste",
+      "email": "Teste@gmail",
+      "phone": "6578657576",
+      "cpf": "38760676000",
+      "cnpj": "",
+      "dataNascimento": "2023-08-18T03:00:00.000Z",
+      "password": "1343245324"
     }
   ]
 }

@@ -27,7 +27,8 @@ export class CadastroComponent {
       Validators.required, GenericValidator.isvalidCpf()])
 
     ],
-    cnpj: [null, Validators.required]
+    cnpj: [null, Validators.required],
+    dataNascimento: [null, Validators.required]
   });
 
   onSubmit(): void {
@@ -42,6 +43,8 @@ export class CadastroComponent {
       this.user.cpf = this.addressForm.controls['cpf'].value;
     if (this.addressForm.controls['password'].value)
       this.user.password = this.addressForm.controls['password'].value;
+    if (this.addressForm.controls['dataNascimento'].value)
+      this.user.dataNascimento = this.addressForm.controls['dataNascimento'].value;
     //    alert('Usuário cadastrado com sucesso!');
     //    localStorage.setItem('user',JSON.stringify(this.user));
 
