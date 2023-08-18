@@ -14,6 +14,8 @@ const httpOptions = {
 export class UserService {
 
   BASE_URL:string='http://localhost:3000/';
+  TOKEN_FIREBASE:string='';
+  FIREBASE_URL: string='';
 
   constructor(private http:HttpClient) { }
 
@@ -22,7 +24,11 @@ export class UserService {
     return this.http.get<User[]>(url)
   } 
   
-  addUsers(user:any): Observable<User>{
+  login(data:any): Observable<User>{
+    return this.http.post<User>(this.FIREBASE_URL + 'users',data,httpOptions)
+  }
+  
+  addUser(user:any): Observable<User>{
     return this.http.post<User>(this.BASE_URL + 'users',user,httpOptions)
   }
   editUsers(user:any): Observable<User>{

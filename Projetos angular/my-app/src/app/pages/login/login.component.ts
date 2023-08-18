@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 
 import { FormBuilder, Validators } from '@angular/forms';
 import { autorizadoGuard } from 'src/app/guards/autorizado.guard';
+import { UserService } from 'src/app/service/user.service';
 import { AutorizacaoService } from 'src/app/services/autorizacao.service';
 
 
@@ -20,6 +21,10 @@ export class LoginComponent {
   });
   email = this.addressForm.controls['email'];
   password = this.addressForm.controls['password']
+  constructor(
+    private autorizacaoService:AutorizacaoService,
+    private service: UserService
+  ){}
 
   getErrorEmailMessage(){
     if (this.email.hasError('required')) {
@@ -35,9 +40,7 @@ export class LoginComponent {
     }
     return '';
   }
-  constructor(
-    private autorizacaoService:AutorizacaoService
-  ){}
+ 
 
   loginClick(){
     if (this.autorizacaoService.obterLoginStatus())
@@ -46,7 +49,20 @@ export class LoginComponent {
       this.autorizacaoService.autorizar();
   }
   onSubmit(): void {
-    this.loginClick();
-    alert('Thanks!');
+    if (this.autorizacaoService.obterLoginStatus())
+      this.autorizacaoService.deslogar();
+    else{
+      this.service.login({user:'sdfsd'}).subscribe({
+        next:(response)=>{
+          console.log(response)
+          this.autorizacaoService.autorizar();
+        },
+        error:(erro:any) =>{
+          console.log("Ocorreu um erro")
+        }
+      })
+      //this.autorizacaoService.autorizar();
+
+    }
   }
 }

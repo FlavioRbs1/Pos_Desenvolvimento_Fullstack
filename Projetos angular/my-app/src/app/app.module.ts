@@ -31,7 +31,7 @@ import { DetalheComponent } from './detalhe/detalhe/detalhe.component';
 import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
-import { UserService } from './service/services.service';
+import { UserService } from './service/user.service';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { DialogContentExampleDialog, ModalComponent } from './pages/modal/modal.component';

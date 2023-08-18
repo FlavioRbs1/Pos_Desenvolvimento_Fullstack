@@ -4,7 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { LestarDataSource, LestarItem } from './lestar-datasource';
 import { User } from '../models/user';
-import { UserService } from 'src/app/service/services.service';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-lestar',

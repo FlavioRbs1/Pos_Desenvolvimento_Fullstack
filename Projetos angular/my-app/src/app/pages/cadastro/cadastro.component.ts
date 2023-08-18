@@ -3,7 +3,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { User } from '../models/user';
 import { GenericValidator } from 'src/app/comum/validador';
-import { UserService } from 'src/app/service/services.service';
+import { UserService } from 'src/app/service/user.service';
 
 
 @Component({
