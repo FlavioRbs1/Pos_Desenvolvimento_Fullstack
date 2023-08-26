@@ -89,7 +89,6 @@ import { MatSortModule } from '@angular/material/sort';
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
-    MatIconModule,
     NgxMaskPipe,
     DialogContentExampleDialog,
     MatDatepickerModule,
